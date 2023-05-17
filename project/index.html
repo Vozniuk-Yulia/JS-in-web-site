@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARFUM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fa-solid fa-bars"></label>
+        <a href="index.html" >
+            <img  alt="" src="images/logoheader.png"/>
+        </a>
+        <nav class="navbar">
+            <a href="about.html">Про нас</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="contact.html">Контакти</a> 
+        </nav>
+        <div class="icons">
+            <a href="shoppingbag.html" class="fa-solid fa-bag-shopping"></a>
+            <span id="goodsCount" class="count goods"></span>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h1 class="main header">Використовуйте свою елегантність щодня</h1>
+            <h4 class="secondary header">Люди змінюються, але спогади про їхні аромати не змінюються. Тому, це ідеальний аксесуар саме для Вас
+            </h4>
+            <div class="row buttons">
+                <div class="column">
+                    <button onclick="window.location.href='catalog.html';" class="btn main section">Каталог</button>
+                </div>
+                <div class="column">
+                    <button onclick="window.location.href='shoppingbag.html';" class="btn main section">Кошик</button>
+                </div>
+            </div>
+            
+           
+        </div>
+        <div class="imgcontent">
+            <img class="homeImg" src="images/home.png" alt=""/>
+        </div>
+    </section>
+    <section class="catalog">
+        <h1 class="header section">Каталог</h1>
+        <div class="box-container">
+            <div class="box">
+                <img class="card image" src="images/floristic.png">
+                <h3 class="card title">Флористичні</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            <div class="box">
+                <img class="card image" src="images/eastern.png">
+                <h3 class="card title">Східні</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            <div class="box">
+                <img class="card image" src="images/oceanic.png">
+                <h3 class="card title">Океанічні</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            <div class="box">
+                <img class="card image" src="images/citrus.png">
+                <h3 class="card title">Цитрусові</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            <div class="box">
+                <img class="card image" src="images/spicy.png">
+                <h3 class="card title">Пряні</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            <div class="box">
+                <img class="card image" src="images/fruity.png">
+                <h3 class="card title">Фруктові</h3>
+                <button onclick="window.location.href='catalog.html';" class="btn main show section">Каталог</input>
+            </div>
+            
+        </div>
+    </section>
+    <section class="about">
+        <h1 class="header section">Про нас</h1>
+        <div class="about us">
+            <div class="about img">
+                <img src="images/aboutusimg.png">
+            </div>
+            <div class="about text cont">
+                <h2 class="about us txt">
+                    У PARFUM ви знайдете широкий асортимент парфумів, які зможуть зробити Ваш образ неповторним
+                </h2>
+            </div>
+        </div>
+        <br>
+        <div class="icons advan">
+            <div class="icons about">
+                <img class="advantage img" src="images/advantimg1.png">
+                <div class="info advant">
+                    <h3 class="advantage txt">Якість та оригінальність - пріоритет №1</h3>
+                </div>
+            </div>
+            <div class="icons about">
+                <img class="advantage img" src="images/advantimg2.png">
+                
+                <div class="info advant">
+                    <h3 class="advantage txt">Доставка замовлення цілим та неушкодженим</h3>
+                </div>
+            </div>
+            <div class="icons about">
+                <img class="advantage img" src="images/advantimg3.png">
+                <div class="info advant">
+                    <h3 class="advantage txt">Парфуми на будь-який Ваш смак</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="delivery and payment" id="deliveryandpayment">
+        <h1 class="header section">Доставка та оплата <img class="sign img" src="images/sign.png"></h1>
+        <div class="del pay contain">
+            <div class="delivery box">
+                <h1 class="number">1</h1>
+                <h3 class="txt delivery">Ви здійснюєте замовлення парфум</h3>
+            </div>
+            <div class="delivery box">
+                <h1 class="number">2</h1>
+                <h3 class="txt delivery">Якщо виникають запитання - дзвоніть нам</h3>
+            </div>
+            <div class="delivery box">
+                <h1 class="number">3</h1>
+                <h3 class="txt delivery">Здійснюєте оплату вибраного товару</h3>
+            </div>
+            <div class="delivery box">
+                <h1 class="number">4</h1>
+                <h3 class="txt delivery">Ми оформлюємо посилочку</h3>
+            </div>
+            <div class="delivery box">
+                <h1 class="number">5</h1>
+                <h3 class="txt delivery">Доставляємо посилку протягом 3-х годин</h3>
+            </div>
+            <div class="delivery box">
+                <h1 class="number">6</h1>
+                <h3 class="txt delivery">Сповістимо вас дзвінком або повідомленням</h3>
+            </div>
+        </div>
+    </section>
+    <section class="reviews" id="reviews">
+        <h1 class="header section">Відгуки</h1>
+        <div class="swiper mySwiper review cont" id="reviewBlock">
+            <div class="swiper-wrapper">
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+       
+        <br>
+        <h2 class="review header">Додати власний відгук:</h2>
+        <div class="new review">
+            <div class="name author">
+                <h3 class="name label review">Ім‘я:</h3>
+                <input id="username" type="text"
+                placeholder=""
+                class="name input"/>
+            </div>
+            <br>
+            <div class="name author">
+                <h3 class="name label review">Відгук:</h3>
+                <input id="rewiewTxt" type="text"
+                placeholder=""
+                class="review input"/>
+            </div>
+            <div class="div of butt">
+                <button onclick="addReview()" class="btn main section">Додати</button>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="links container">
+            <div class="elem">
+                    <a href="#"><h4>Інформація</h4></a>
+                    <a href="#"><h5>Хіт продажу</h5></a>
+                    <a href="#aboutus"><h5>Про нас</h5></a>
+                    <a href="#deliveryandpayment"><h5>Доставка</h5></a>
+                    <a href="#reviews"><h5>Відгуки</h5></a>
+            </div>
+            <div class="elem">
+                <a href="catalog.html"><h4>Каталог</h4></a>
+                <a href="catalog.html"><h5>Флористичні</h5></a>
+                <a href="catalog.html"><h5>Східні</h5></a>
+                <a href="catalog.html"><h5>Океанічні</h5></a>
+                <a href="catalog.html"><h5>Цитрусові</h5></a>
+                <a href="catalog.html"><h5>Пряні</h5></a>
+                <a href="catalog.html"><h5>Фруктові</h5></a>
+            </div>
+            <div class="elem">
+                <a href="#"><h4>Контакти</h4></a>
+                <a href="#"><h5>0999999999</h5></a>
+                <a href="#"><h5>09811111111</h5></a>
+            </div>
+            <div class="elem">
+                <a href="#"><h4>Соціальні мережі</h4></a>
+                <div class="social net">
+                    <div>
+                        <button class="btnwithicon">
+                            <a style="padding: 0;" href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                           
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btnwithicon">
+                            <a style="padding: 0;" href="https://uk-ua.facebook.com/">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                           
+                        </button>
+                  
+                    </div>
+                    <div> 
+                        <button class="btnwithicon">
+                            <a style="padding: 0;" href="https://www.whatsapp.com/?lang=uk">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                       
+                    </button>
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </div>
+        <h5 class="copyright">©Copyright 2023</h5>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script1.js"></script>
+</body>
+</html>
