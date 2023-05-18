@@ -57,10 +57,10 @@ const data = [
      count:1,
    },
  ];
-const selectedJSONProduct = localStorage.getItem('selectedProduct');
+let selectedJSONProduct = localStorage.getItem('selectedProduct');
 selectedProduct = JSON.parse(selectedJSONProduct);
 if (selectedProduct) {
-   const productDetailsElement = document.getElementById('exactProdDetail');
+  let productDetailsElement = document.getElementById('exactProdDetail');
    productDetailsElement.innerHTML = `
    <div class="col">
    <img class="main prod det" src="${selectedProduct.img}">
@@ -102,12 +102,12 @@ if (selectedProduct) {
 //const goodsCountSpan = document.getElementById('goodsCount');
 //let goodsCount = parseInt(localStorage.getItem('goodsCount')) || 0;
 
-const cartView = document.querySelector(".shoppingbag.page .col.bagList");
+let cartView = document.querySelector(".shoppingbag.page .col.bagList");
 function addToCart(choosenProductId)
 {
 
-  const choosenProduct = data.find((item) => item.id === choosenProductId);
-  const newItem = {
+  let choosenProduct = data.find((item) => item.id === choosenProductId);
+  let newItem = {
 
     productId: choosenProductId,
     name: choosenProduct.name,
@@ -115,7 +115,7 @@ function addToCart(choosenProductId)
     price: choosenProduct.price,
     count: 1, 
   };
-  const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+  let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
   shoppingCart.push(newItem);
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
   console.log(shoppingCart);
@@ -125,10 +125,10 @@ function addToCart(choosenProductId)
 }
 function displayCart(carts) {
 
-  const cartView = document.querySelector(".col.bagList");
+  let cartView = document.querySelector(".col.bagList");
 
   if (carts.length > 0) {
-     const review_carts = carts
+    let review_carts = carts
         .map(
            (card) => `
            <div class="shopingbag box">
@@ -152,12 +152,12 @@ function displayCart(carts) {
      cartView.innerHTML = "<h3>Порожня корзина</h3>";
   }
 }
-const shoppingCartUpdate = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+let shoppingCartUpdate = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 displayCart(shoppingCartUpdate);
 function deleteProduct(productId) {
   
   let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
-  const productIndex = shoppingCart.findIndex((item) => item.productId === productId);
+  let productIndex = shoppingCart.findIndex((item) => item.productId === productId);
 
   if (productIndex !== -1) {
    
@@ -172,11 +172,11 @@ function deleteProduct(productId) {
 
 function countSum(prodId)
 {
-   const countInput = document.getElementById('productsCount');
-   const priceElement = document.getElementById('totalPrice');
-   const choosenProductId = prodId;
-   const choosenProduct = shoppingCart.find(item => item.productId=== choosenProductId);
-   const count = parseInt(countInput.value);
-   const totalPrice = choosenProduct.price * count;
+  let countInput = document.getElementById('productsCount');
+  let priceElement = document.getElementById('totalPrice');
+  let choosenProductId = prodId;
+  let choosenProduct = shoppingCart.find(item => item.productId=== choosenProductId);
+  let count = parseInt(countInput.value);
+  let totalPrice = choosenProduct.price * count;
    priceElement.textContent = totalPrice + '₴';
 }

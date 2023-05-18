@@ -45,15 +45,15 @@ function countSum()
         description:" Зроблено у: Іспанія, прем'єра аромату: 2022, країна ТМ: Іспанія, стать: для жінок, класифікація: елітна, тип аромату:пряні",
       },
     ];  
-const productsContainer = document.querySelector(".row.cards");
-const categoryList = document.querySelector(".producerfilter");
-const volumeList = document.querySelector(".volumefilter");
-const productsDetail=document.querySelector(".product.page");
+let productsContainer = document.querySelector(".row.cards");
+let categoryList = document.querySelector(".producerfilter");
+let volumeList = document.querySelector(".volumefilter");
+let productsDetail=document.querySelector(".product.page");
 //const userReview=document.querySelector(".swiper-wrapper");
 function displayReviews(revs)
 {
   if (revs.length > 0) {
-    const review_list = revs
+    let review_list = revs
       .map(
         (product) => `
         <div class="swiper-slide">
@@ -73,7 +73,7 @@ function displayReviews(revs)
 }
 function displayProducts(products) {
     if (products.length > 0) {
-      const product_details = products
+      let product_details = products
         .map(
           (product) => `
            <div class="col">
@@ -100,13 +100,13 @@ function displayProducts(products) {
       productsContainer.innerHTML = "<h3>No Products Available</h3>";
     }
   }
-  const priceRange = document.querySelector("#priceRange");
-const priceValue = document.querySelector(".priceValue");
+  let priceRange = document.querySelector("#priceRange");
+  let priceValue = document.querySelector(".priceValue");
 
 function setPrices() {
-  const priceList = data.map((product) => product.price);
-  const minPrice = Math.min(...priceList);
-  const maxPrice = Math.max(...priceList);
+  let priceList = data.map((product) => product.price);
+  let minPrice = Math.min(...priceList);
+  let maxPrice = Math.max(...priceList);
   priceRange.min = minPrice;
   priceRange.max = maxPrice;
   priceValue.textContent = maxPrice;
@@ -117,28 +117,28 @@ function setPrices() {
   });
 }
 function filterProducts() {
-  const selectedCategories = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+  let selectedCategories = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
     .map((checkbox) => checkbox.value);
   
-  const filteredProducts = data.filter((product) => {
+    let filteredProducts = data.filter((product) => {
     return selectedCategories.includes(product.catagory) || selectedCategories.length === 0;
   });
   
   displayProducts(filteredProducts);
 }
 function filterProductsByVolume() {
-  const selectedVolume = document.querySelector('input[name="volumeChoice"]:checked').value;
+  let selectedVolume = document.querySelector('input[name="volumeChoice"]:checked').value;
   
-  const filteredProducts = data.filter((product) => {
+  let filteredProducts = data.filter((product) => {
     return selectedVolume === "all" || product.volume === selectedVolume;
   });
   
   displayProducts(filteredProducts);
 }
 function setCategories() {
-  const allCategories = data.map((product) => product.catagory);
+  let allCategories = data.map((product) => product.catagory);
   //console.log(allCategories);
-  const catagories = [
+  let catagories = [
     ...allCategories.filter((product, index) => {
       return allCategories.indexOf(product) === index;
     }),
@@ -158,9 +158,9 @@ function setCategories() {
 }
 function setVolume()
 {
-  const allVolumes = data.map((product) => product.volume);
+  let allVolumes = data.map((product) => product.volume);
   //console.log(allCategories);
-  const volumes = [
+  let volumes = [
     ...allVolumes.filter((product, index) => {
       return allVolumes.indexOf(product) === index;
     }),
@@ -185,7 +185,7 @@ function setVolume()
 
 function showProductDetail(productId)
 {
-  const product = data.find((item) => item.id === productId);
+  let product = data.find((item) => item.id === productId);
   localStorage.setItem('selectedProduct', JSON.stringify(product));
   window.location.href = 'product.html';
 }

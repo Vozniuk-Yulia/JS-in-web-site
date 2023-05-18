@@ -42,11 +42,11 @@ var swiper = new Swiper(".mySwiper", {
       },
    ];
 
-   const userReview = document.querySelector(".swiper-wrapper");
+   let userReview = document.querySelector(".swiper-wrapper");
 
    function displayReviews(respons) {
      if (respons.length > 0) {
-       const review_list = respons
+      let review_list = respons
          .map(
            (product) => `
            <div class="swiper-slide">
@@ -80,7 +80,7 @@ function addReview()
   }
   else if(username.value.length>0 && text.value.length>0)
   {
-    const newItem = {
+    let newItem = {
         name: username.value,
         review: text.value,
         img: "images/person.png",
